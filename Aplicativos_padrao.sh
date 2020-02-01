@@ -4,7 +4,7 @@ cd /home/$USER/Desktop/temp
 
 #instalação de programas padrão
 
-sudo apt-get install wget transmission zsh git curl openjdk-11-jdk-headless openjdk-11-source openjdk-11-dbg openjdk-11-doc openjfx maven sl logisim vsftpd g++ code
+sudo apt-get install wget transmission zsh git curl openjdk-11-jdk-headless openjdk-11-source openjdk-11-dbg openjdk-11-doc openjfx maven sl logisim vsftpd g++ python3-pip inkscape x11-apps
 
 
 
@@ -46,7 +46,41 @@ mv idea-* idea
 
 mv pycharm-* pycharm
 
-#Download e instalação do oh my zsh
+
+#Configuração do vsftpd
+
+#Criação do diretório padrão
+mkdir /home/$USER/vsftpd
+
+sudo rm /etc/vsftpd.conf
+
+sudo echo \
+"
+anon_root=/home/$USER/ftp
+
+listen=YES
+
+anonymous_enable=YES
+
+local_enable=YES
+
+dirmessage_enable=YES
+
+use_localtime=YES
+
+xferlog_enable=YES
+
+connect_from_port_20=YES
+
+secure_chroot_dir=/var/run/vsftpd/empty
+
+pam_service_name=vsftpd
+
+rsa_cert_file=/etc/ssl/private/vsftpd.pem
+" >> /etc/vsftpd.conf
 
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+
+ 
