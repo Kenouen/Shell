@@ -11,17 +11,19 @@ chmod +x build.sh
 chmod +x ./install.sh
 sudo ./install.sh
 
-#Icones numix-circle
+#Repos
 
+#Icones numix-circle
 sudo add-apt-repository ppa:numix/ppa
 #plank dock
 sudo add-apt-repository -y ppa:ricotz/docky
+#papirus
+sudo add-apt-repository ppa:papirus/papirus
 
 sudo apt update
 
-sudo apt install numix-icon-theme-circle
+sudo apt-get install papirus-icon-theme numix-icon-theme-circle 
 
-sudo apt-get install plank
 
 #wallpaper
 
