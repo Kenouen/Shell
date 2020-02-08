@@ -49,17 +49,19 @@ mv idea-* idea
 
 mv pycharm-* pycharm
 
+cd /home/$USER
 
+sudo chown -R $USER clion idea pycharm 
 #Configuração do vsftpd
 
 #Criação do diretório padrão
-mkdir /home/$USER/vsftpd
+mkdir vsftpd
 
 sudo rm /etc/vsftpd.conf
 
 sudo echo \
 "
-anon_root=/home/$USER/ftp
+anon_root=/home/$USER/vsftp
 
 listen=YES
 
