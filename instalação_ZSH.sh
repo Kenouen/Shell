@@ -35,3 +35,6 @@ source \$ZSH/oh-my-zsh.sh
 
 export PATH=\$PATH:/home/$USER/idea/bin:/home/$USER/clion/bin:/home/$USER/pycharm/bin
 " >> /home/$USER/.zshrc
+
+
+echo "Após a instalação, mudar a fonte padrão do terminal para a fonte 'MesloLGS NF Regular'"

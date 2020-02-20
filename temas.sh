@@ -1,6 +1,5 @@
-#!bin/bash
-
-sudo cd /tmp
+mkdir /tmp/temp
+cd /tmp/temp
 
 #binata cursor
 
@@ -45,4 +44,3 @@ cd Adapta-Colorpack && ./Install.sh
 git clone https://github.com/Joshaby/Adapta-Nord.git
 
 cd Adapta-Nord && ./Install.sh
-
