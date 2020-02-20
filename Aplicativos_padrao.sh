@@ -1,6 +1,6 @@
 #pasta auxiliar temporaria
-mkdir /home/$USER/Desktop/temp
-cd /home/$USER/Desktop/temp
+mkdir /tmp/temp
+cd /tmp/temp
 
 #instalação de programas padrão
 
