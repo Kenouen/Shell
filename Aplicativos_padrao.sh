@@ -60,7 +60,7 @@ sudo rm /etc/vsftpd.conf
 
 sudo echo \
 "
-anon_root=/home/$USER/vsftp
+anon_root=/home/$USER/vsftpd
 
 listen=YES
 
