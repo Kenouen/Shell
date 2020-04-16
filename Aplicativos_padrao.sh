@@ -15,6 +15,8 @@ wget -c https://download-cf.jetbrains.com/idea/ideaIU-2020.1.tar.gz
 
 wget -c https://download-cf.jetbrains.com/cpp/CLion-2020.1.1.tar.gz
 
+wget -c https://download.virtualbox.org/virtualbox/6.1.2/virtualbox-6.1_6.1.2-135662~Ubuntu~bionic_amd64.deb
+
 wget -c https://az764295.vo.msecnd.net/stable/26076a4de974ead31f97692a0d32f90d735645c0/code_1.41.1-1576681836_amd64.deb
 
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -26,6 +28,8 @@ sudo tar -xzvf ideaIU-2020.1.tar.gz -C /home/$USER/
 
 sudo tar -xzvf pycharm-professional-2020.1.tar.gz -C /home/$USER/
 
+
+sudo dpkg -i virtualbox*
 
 sudo dpkg -i google*
 
