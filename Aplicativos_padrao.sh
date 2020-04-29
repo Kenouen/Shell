@@ -6,7 +6,7 @@ cd /tmp/temp
 
 for i in logisin code wget transmission zsh git curl openjdk-11-jdk-headless openjdk-11-source openjdk-11-dbg openjdk-11-doc openjfx maven sl logisim vsftpd g++ python3-pip inkscape x11-apps
 do
-    sudo apt-get install $i
+    sudo apt-get install $i && echo "instalando $i"
 done
 
 
@@ -66,9 +66,10 @@ echo \
 Version=1.0
 Type=Application
 Terminal=false
-Icon=/home/$USER/idea/bin/idea.png
+Icon=/usr/share/icons/Papirus/64x64/apps/idea-ultimate.svg
 Exec=sh /home/$USER/idea/bin/idea.sh
 Name= Intellij
+Categories=Development;IDE;
 " >> Intellij.desktop
 
 chmod a+x Intellij.desktop
@@ -79,9 +80,10 @@ echo \
 Version=1.0
 Type=Application
 Terminal=false
-Icon=/home/$USER/clion/bin/clion.png
+Icon=/usr/share/icons/Papirus/64x64/apps/clion.svg
 Exec=sh /home/$USER/clion/bin/clion.sh
 Name= Clion
+Categories=Development;IDE;
 " >> Clion.desktop
 
 chmod a+x Clion.desktop
@@ -92,13 +94,15 @@ echo \
 Version=1.0
 Type=Application
 Terminal=false
-Icon=/home/$USER/pycharm/bin/pycharm.png
+Icon=/usr/share/icons/Papirus/64x64/apps/pycharm-professional.svg
 Exec=sh /home/$USER/pycharm/bin/pycharm.sh
 Name= Pycharm
+Categories=Development;IDE;
 " >> Pycharm.desktop
 
 chmod a+x Pycharm.desktop
 
+sudo cp *.desktop /usr/share/applications
 
 #Configuração do vsftpd
 
