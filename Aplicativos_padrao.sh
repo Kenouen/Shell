@@ -6,7 +6,7 @@ cd /tmp/temp
 
 for i in logisin code wget transmission zsh git curl openjdk-11-jdk-headless openjdk-11-source openjdk-11-dbg openjdk-11-doc openjfx maven sl logisim vsftpd g++ python3-pip inkscape x11-apps
 do
-    sudo apt-get install $i && echo "instalando $i"
+    sudo apt-get -y install > txt.txt $i && echo "instalando $i"
 done
 
 
@@ -18,7 +18,7 @@ wget -c https://download-cf.jetbrains.com/idea/ideaIU-2020.1.tar.gz
 
 wget -c https://download-cf.jetbrains.com/cpp/CLion-2020.1.tar.gz
 
-wget -c https://download.virtualbox.org/virtualbox/6.1.2/virtualbox-6.1_6.1.2-135662~Ubuntu~bionic_amd64.deb
+wget -c https://download3.operacdn.com/pub/opera/desktop/68.0.3618.125/linux/opera-stable_68.0.3618.125_amd64.deb
 
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
@@ -30,9 +30,9 @@ sudo tar -xzvf ideaIU-2020.1.tar.gz -C /home/$USER/
 sudo tar -xzvf pycharm-professional-2020.1.tar.gz -C /home/$USER/
 
 
-sudo dpkg -i virtualbox*
-
 sudo dpkg -i google*
+
+sudo dpkg -i opera*
 
 
 
