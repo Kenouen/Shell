@@ -1,5 +1,7 @@
 #Download e instalação do oh my zsh
 
+sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y
+
 sudo apt-get install -y zsh curl git
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
