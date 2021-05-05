@@ -2,7 +2,7 @@
 
 sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y
 
-sudo apt-get install -y zsh curl git
+sudo apt-get install -y zsh curl git byobu
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -41,7 +41,13 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source \$ZSH/oh-my-zsh.sh
 
+export NVM_DIR=~/.nvm
+ [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 export PATH=\$PATH:/home/$USER/idea/bin:/home/$USER/clion/bin:/home/$USER/pycharm/bin
+
+_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
+
 " >> /home/$USER/.zshrc
 
 
