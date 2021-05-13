@@ -50,5 +50,10 @@ _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
 
 " >> /home/$USER/.zshrc
 
+#atualizando o byobu
+rm /home/$USER/.byobu/.tmux.conf
+
+echo "set -g terminal-overrides 'xterm*:smcup@:rmcup@'" >> /home/$USER/.byobu/.tmux.conf
+
 
 echo "Após a instalação, mudar a fonte padrão do terminal para a fonte 'MesloLGS NF Regular'"

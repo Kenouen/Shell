@@ -10,15 +10,15 @@ sudo apt update -y && sudo apt upgrade -y sudo apt autoremove -y
 #instalação de programas padrão
 for i in logisim wget transmission zsh git curl openjdk-11-jdk-headless openjdk-11-source openjdk-11-dbg openjdk-11-doc openjfx maven sl vsftpd g++ python3-pip inkscape x11-apps chrome-gnome-shell
 do
-    sudo apt-get -y install > log.txt $i && echo "instalando $i"
+    echo "instalando $i" && sudo apt-get -y install > log.txt $i
 done
 
 #Instalação do NodeJS na versão 10x
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | zsh
 nvm install v10.21.0
 
 #Instalação da CLI do Angular
-sudo npm install -g @angular/cli
+npm install -g @angular/cli
 
 #Instalação de Java 8
 sudo add-apt-repository ppa:openjdk-r/ppa
@@ -31,7 +31,11 @@ sudo apt install docker.io
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-
+#Instalação do nemo e remoção do nautilus
+sudo apt install nemo
+xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
+gsettings set org.gnome.desktop.background show-desktop-icons false
+gsettings set org.nemo.desktop show-desktop-icons true
 
 #Configuração do vsftpd
 mkdir /home/$USER/vsftpd
